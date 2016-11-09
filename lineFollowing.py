@@ -14,7 +14,7 @@ import RPi.GPIO as GPIO
 import time
 
 
-# define pins
+# define pins for the line following sensor
 
 leftPin = 10
 middlePin = 9
@@ -23,7 +23,7 @@ rightPin = 11
 
 
 
-# Setup pins for linefollower
+# Setup pins for line following sensor
 
 GPIO.setmode(GPIO.BCM) # Broadcom pin-numbering scheme
 
@@ -75,6 +75,7 @@ def readInputs():
     returnValues = [left, middle, right]
     return returnValues
 
+# define motor speed values and set to 0.0
 
 driveLeft = 0.0
 driveRight = 0.0
@@ -86,29 +87,40 @@ oldDriveRight = 0.0
 while True:
 
 
-    line = readInputs()
-    print line
-    time.sleep(0.01)
+    line = readInputs() # call the read line following sensor function
+    # print line # remove hash for debuging
+    time.sleep(0.01) # adjust if 100 per second reads if too fast or slow
+	
+	# if line is on left turn right
 
     if (line == [0, 1, 1]):
          driveLeft = -0.6
          driveRight = 0.6
-
+		 
+    # if line is central, power both motors
 
     if (line == [1, 0, 1]):
          driveLeft = 0.5
          driveRight = 0.5
+		 
+    # if line is right turn left
 
     if (line == [1, 1, 0]):
          driveLeft = 0.6
          driveRight =-0.6
+		 
+	# if can't see line, repeat last move
 
     if (line == [1, 1, 1]):
         driveLeft = oldDriveLeft
         driveRight = oldDriveRight
+		
+	# save driveLeft and driveRight to oldDriveLeft and oldDriveRight
 
     oldDriveLeft = driveLeft
     oldDriveRight = driveRight
+	
+	# update motor values
 
     ZB.SetMotor2(-driveLeft * maxPower)
     ZB.SetMotor3(-driveLeft * maxPower)
