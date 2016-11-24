@@ -6,9 +6,10 @@ Chassis design has been updated to Version 1.1: wheelbase increased by 10mm.
 
    lineFollowing.py added
  
-Code for maze and speed challenges will be added soon, watch this space!
- 
-   pseudo code for maze and speed challenges added
+   Pseudo code for maze and speed challenges added
+   
+   Code for maze and speed challenges will be added soon, watch this space!
+   
    modified PiBorg zbJoystick.py for rock candy controller added
 
 Added simple python library to control the Adafruit TCA9548A i2c multiplexer, the library is called multiplex.py
