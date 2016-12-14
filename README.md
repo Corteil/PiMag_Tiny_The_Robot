@@ -4,7 +4,7 @@ Find everything for the PiMag robot Tiny, including the design &amp; software fi
 
 Chassis design has been updated to Version 1.1: wheelbase increased by 10mm.
 
-3d files of "Tiny" created by Richard Hayler aka @rdhayler on the twiter
+3d files of "Tiny" created by Richard Hayler aka @rdhayler on the twiter. Richard used a fill density of 20% with PLA filament
 
    lineFollowing.py added
  
