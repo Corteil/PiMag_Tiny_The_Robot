@@ -4,6 +4,8 @@ Find everything for the PiMag robot Tiny, including the design &amp; software fi
 
 Chassis design has been updated to Version 1.1: wheelbase increased by 10mm.
 
+3d files of "Tiny" created by Richard Hayler aka @rdhayler on the twiter
+
    lineFollowing.py added
  
    Pseudo code for maze and speed challenges added
@@ -14,6 +16,8 @@ Chassis design has been updated to Version 1.1: wheelbase increased by 10mm.
 
 Added simple python library to control the Adafruit TCA9548A i2c multiplexer, the library is called multiplex.py
 an example will upload soon showing the use of the library.
+
+The best way to contact me is via Twiter, will answer when life allows.
 
 
 
