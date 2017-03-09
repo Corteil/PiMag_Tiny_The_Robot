@@ -2,7 +2,6 @@
 
 Find everything for the PiMag robot Tiny, including the design &amp; software files here.
 
-Chassis design has been updated to Version 1.5: bottom plate adjusted by Paul Beech of Pimoroni, to accept Pimoroni Micro Metal Gearmotor with Push Header Shim.  
 Chassis from version 1.1 wheelbase increased by 10mm.
 
 3d files of "Tiny" created by Richard Hayler aka @rdhayler on the twiter. Richard used a fill density of 20% with PLA filament
